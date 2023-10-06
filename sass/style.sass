@@ -1,15 +1,11 @@
-$color-grey: #777777
-$color-brown-light: #BA8554
-$color-brown-dark: #A14F03
-$color-white: #FAFAFA
-$color-black: #000
-$box-shadow: (0px 4px 4px 0px rgba(0, 0, 0, 0.3))
+@import "abstracts/variables.sass"
+@import "abstracts/mixins.sass"
+@import "abstracts/functions.sass"
+@import "base/animations.sass"
 
-@mixin style-link
-    display: inline-block
-    text-transform: uppercase
-    text-decoration: none
-    color: $color-grey
+
+
+
 
 *, ::after, ::before
     margin: 0
@@ -77,7 +73,7 @@ body
 
 .btn
     &:link, &:visited
-        @include style-link
+        @include style-link(#777777)
         background: $color-white
         border-radius: 5rem
         padding: 1.5rem 4rem
@@ -109,28 +105,4 @@ body
         animation: opacityOfBtn 4s ease-out .7s
         animation-fill-mode: backwards
 
-
-@keyframes leftToRight
-    0%
-        opacity: 0
-        transform: translateX(-10rem)
-
-    100%
-        opacity: 1
-        transform: translateX(0rem)
-
-@keyframes rightToLeft
-    0%
-        opacity: 0
-        transform: translateX(10rem)
-
-    100%
-        opacity: 1
-        transform: translateX(0rem)
-
-@keyframes opacityOfBtn
-    0%
-        opacity: 0
-    100%
-        opacity: 1
 
