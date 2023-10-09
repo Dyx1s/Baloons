@@ -3,3 +3,9 @@
     text-transform: uppercase
     text-decoration: none
     color: $color
+//сброс схлопывания блоков из-за float: left, для сетки
+@mixin clearfix
+    &::after
+        content: ""
+        display: table
+        clear: both
