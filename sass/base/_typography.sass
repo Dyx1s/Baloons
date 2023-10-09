@@ -28,3 +28,17 @@ body
         animation-duration: 4s
         backface-visibility: hidden
         margin-bottom: 5rem
+
+.title-secondary
+    font-size: 3.6rem
+    letter-spacing: 1rem
+    text-transform: uppercase
+    font-weight: 800
+    background: linear-gradient(90deg, rgba($color-brown-light, 0.70) 0.03%, rgba($color-black, 0.70) 99.94%), center / cover no-repeat
+    -webkit-background-clip: text //отображает background по тексту
+    color: transparent //делает буквы прозрачными для того, чтобы градиент backgroundа отобразился сквозь буквы заголовка
+    transition: all 1s
+    backface-visibility: hidden
+    &:hover
+        transform: skewX(15deg) skewY(2deg) scale(1.1)
+        text-shadow: $h2-shadow
