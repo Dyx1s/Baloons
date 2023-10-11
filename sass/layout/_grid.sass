@@ -1,6 +1,5 @@
 .row
     max-width: $grid-with
-    background: #c89393
     margin: 0 auto
     &:not(:last-child) //отступ снизу за исключением последней строки
         margin-bottom: $margin-vertical-big
@@ -29,5 +28,4 @@
 [class^="col-"] //объединение стилей по атрибуту класса. ^ показывает НАЧАЛО НАЗВАНИЯ КЛАССА!
     &:not(:last-child)
         margin-right: $gutter-horizontal
-    background: green
     float: left
