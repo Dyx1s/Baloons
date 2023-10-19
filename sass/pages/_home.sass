@@ -1,2 +1,12 @@
 .section-about
     padding-top: 8rem
+    padding-bottom: 15rem
+.section-cards
+    padding: 21rem 0
+    background: linear-gradient(90deg, rgba($color-brown-light, 0.70) 0.03%, rgba($color-black, 0.70) 99.94%), url('../img/section-cards.jpg') center / cover no-repeat
+    /* делаем почти то же, что и делали с clip-path */
+    transform: skewY(7deg) //делаем наклон всей секции
+    & > * //обращение ко всем дочерним элементам
+        transform: skewY(-7deg) //отмена наклона дочерних элементов
+.section-tour
+    padding-top: 21rem
