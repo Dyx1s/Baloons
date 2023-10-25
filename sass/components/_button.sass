@@ -1,5 +1,5 @@
 .btn
-    &:link, &:visited
+    &, &:link, &:visited
         @include style-link(#777777)
         background: $color-white
         border-radius: 5rem
@@ -8,6 +8,7 @@
         position: relative
         font-size: 2rem
         box-shadow: $box-shadow
+        border: none
     &:hover
         transform: translateY(-0.5rem)
         box-shadow: $box-shadow
@@ -28,6 +29,14 @@
         top: 0
         left: 0
         z-index: -1
-        transition: all 1s
+        transition: all .5s
     &_animated
         animation-fill-mode: backwards
+
+.btn_brown
+    &, &:link, &:visited
+        background: $color-brown-light
+        color: $color-white
+    &:hover
+        &::after
+            background: $color-brown-light

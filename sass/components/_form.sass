@@ -9,7 +9,10 @@
     width: 60%
     padding: 5rem
     &__group:not(:last-child)
-        margin-bottom: 5rem
+        margin-bottom: 2rem
+    &__group:nth-child(4) //применение стиля к 4 элементу form__group
+        margin-bottom: 4rem
+        
 
     &__input
         font-size: $font-size-paragraph
@@ -21,7 +24,7 @@
         border-bottom: .2rem solid transparent
         border: none
         border-radius: .5rem
-        width: 55%
+        width: 70%
         &:focus
             outline: none
             border-bottom: .2rem solid #66D763
@@ -37,7 +40,42 @@
         margin-top: 1rem
         margin-left: 1.5rem
         transition: .7s all
-    &__input:placeholder-shown + &__label
+    &__input:placeholder-shown + &__label //через + обращение к соседнему классу
         opacity: 0
         visibility: hidden
         transform: translateY(-3rem)
+    &__input-radio
+        display: none
+    &__group-radio
+        width: 45%
+        display: inline-block
+    &__label-radio
+        cursor: pointer
+        position: relative
+        padding-left: 4rem
+    /* Делаем коричневые кнопки эти ебучие */
+    &__button-radio
+        height: 3rem
+        width: 3rem
+        border-radius: 50%
+        border: .5rem solid $color-brown-light
+        display: block
+        position: absolute
+        top: -0.6rem
+        left: 0rem
+        &::after //кружок внутри этого шоколадного кольца
+            content: ""
+            width: 1.5rem
+            height: 1.5rem
+            border-radius: 50%
+            background: $color-brown-light
+            display: block
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            opacity: 0
+            transition: .3s all
+
+    &__input-radio:checked ~ &__label-radio &__button-radio::after
+        opacity: 1
